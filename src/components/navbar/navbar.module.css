@@ -3,8 +3,8 @@
     z-index: 999;
     height: 60px;
     width: 100%;
-    background-color: white;
-    box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(21, 21, 21);
+    box-shadow: 2px 5px 27px -8px rgba(31, 162, 8, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
 
 .left{
     font-size: 36px;
-    color: rgb(26, 180, 26);
+    color: rgb(66, 239, 208);
 }
 
 .right{
@@ -46,7 +46,7 @@
     border-radius: 8px;
     font-weight: bold;
     font-size: 17px;
-    background-color: #10c142;
+    background-color: #011a08;
 }
 
 .create{
@@ -60,7 +60,7 @@
     border: none;
     padding: 0.5rem 1.25rem;
     font-size: 17px;
-    background-color: #10c142;
+    background-color: #027a26;
     color: #fff;
     border-radius: 12px;
     cursor: pointer;
@@ -91,4 +91,8 @@
     position: absolute;
     top: 0.3rem;
     right: 0.3rem;
+}
+
+.register{
+    color: #efefef;
 }

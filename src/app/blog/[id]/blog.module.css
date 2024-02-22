@@ -1,9 +1,11 @@
-.container{
+/* Default styles */
+
+.container {
     min-height: calc(100vh - 60px);
     width: 100%;
 }
 
-.wrapper{
+.wrapper {
     width: 85%;
     height: 100%;
     margin: 0 auto;
@@ -13,12 +15,12 @@
     align-items: center;
 }
 
-.wrapper > img{
+.wrapper > img {
     object-fit: cover;
     margin-bottom: 2.5rem;
 }
 
-.wrapper > .row{
+.row {
     padding: 0 1rem;
     width: 750px;
     display: flex;
@@ -27,32 +29,32 @@
     margin-bottom: 3.75rem;
 }
 
-.row > .title{
+.row > .title {
     font-size: 36px;
     color: #333;
     text-transform: capitalize;
 }
 
-.row > span{
+.row > span {
     font-weight: bold;
 }
 
-.row > span > span{
+.row > span > span {
     font-weight: 500;
     color: #666;
     font-size: 15px;
 }
 
-.controls{
+.controls {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.editButton{
+.editButton {
     outline: none;
     border: 1px solid transparent;
-    background-color: #3eda22;
+    background-color: #188105;
     color: #fff;
     padding: 0.5rem 1.25rem;
     display: flex;
@@ -65,35 +67,35 @@
     transition: 150ms;
 }
 
-.editButton:hover{
+.editButton:hover {
     background-color: #fff;
-    border-color: #3eda22;
-    color: #3eda22;
+    border-color: #010800;
+    color: #083001;
 }
 
-.deleteButton{
-  outline: none;
-  border: 1px solid transparent;
-  background-color: #f00;
-  color: #fff;
-  padding: 0.5rem 1.25rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 150ms;
+.deleteButton {
+    outline: none;
+    border: 1px solid transparent;
+    background-color: rgb(180, 6, 6);
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 150ms;
 }
 
-.deleteButton:hover{
+.deleteButton:hover {
     background-color: #fff;
-    border-color: #f00;
-    color: #f00;
+    border-color: rgb(22, 26, 1);
+    color: rgb(52, 3, 3);
 }
 
-.author{
+.author {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -101,7 +103,7 @@
     color: #444;
 }
 
-.category{
+.category {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -110,16 +112,16 @@
     font-weight: bold;
 }
 
-.category > span{
+.category > span {
     padding: 0.5rem 1.25rem;
-    background-color: #3eda22;
-    color: #fff;
+    background-color: #157105;
+    color: #efebeb;
     border-radius: 12px;
     font-size: 16px;
     font-weight: 500;
 }
 
-.right{
+.right {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -128,7 +130,7 @@
 
 /* comments */
 
-.commentSection{
+.commentSection {
     margin: 0 auto;
     margin-top: 7.5rem;
     width: 50%;
@@ -140,7 +142,7 @@
     border-radius: 20px;
 }
 
-.commentInput{
+.commentInput {
     padding: 1rem;
     width: 100%;
     display: flex;
@@ -149,12 +151,12 @@
     border-bottom: 1px solid #555;
 }
 
-.commentInput > img{
+.commentInput > img {
     object-fit: cover;
     border-radius: 50%;
 }
 
-.commentInput > input{
+.commentInput > input {
     flex: 1;
     outline: none;
     border: none;
@@ -162,10 +164,10 @@
     border-bottom: 1px solid #555;
 }
 
-.commentInput > button{
+.commentInput > button {
     outline: none;
     border: none;
-    background-color: #0707b5;
+    background-color: #010120;
     color: #fff;
     padding: 0.25rem 0.75rem;
     border-radius: 8px;
@@ -173,7 +175,7 @@
     cursor: pointer;
 }
 
-.comments{
+.comments {
     max-height: 300px;
     overflow: auto;
     margin-top: 1.25rem;
@@ -185,16 +187,89 @@
     gap: 2rem;
 }
 
-.noComments{
+.noComments {
     padding: 1.25rem;
     font-size: 24px;
     color: #222;
 }
 
-.accessDenied{
+.accessDenied {
     width: 100%;
     text-align: center;
-    margin-top: 5re;
+    margin-top: 5rem; /* Typo fixed */
     font-size: 32px;
     font-weight: bold;
+}
+.row {
+    padding: 0 1rem;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.75rem;
+    text-align: center; /* Center align text */
+}
+
+.row > .title {
+    font-size: 36px;
+    color: #333;
+    text-transform: capitalize;
+    width: 100%; /* Make title fill the container width */
+    margin-bottom: 1rem; /* Add margin at the bottom for spacing */
+}
+
+.row > span {
+    font-weight: bold;
+    width: 100%; /* Make spans fill the container width */
+    margin-bottom: 1rem; /* Add margin at the bottom for spacing */
+}
+
+.row > span > span {
+    font-weight: 500;
+    color: #666;
+    font-size: 15px;
+    width: 100%; /* Make nested spans fill the container width */
+    margin-bottom: 1rem; /* Add margin at the bottom for spacing */
+    margin-top: 3rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .container {
+        min-height: auto;
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust width for smaller screens */
+        margin-top: 3rem; /* Adjust margin top for smaller screens */
+    }
+
+    .row {
+        width: 100%; /* Set width to 100% for responsiveness */
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center align elements on smaller screens */
+    }
+
+    .img{
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Adjust other styles for smaller screens */
+}
+
+@media (max-width: 480px) {
+    .row > .title {
+        font-size: 24px; /* Further reduce font size for smaller screens */
+    }
 }

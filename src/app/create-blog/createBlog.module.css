@@ -1,10 +1,10 @@
-.container{
-    margin-top: 5rem;
-    height: calc(100vh - 60px);
+.container {
+    margin-top: 5vw; /* Adjust margin in relation to viewport width */
+    min-height: calc(100vh - 60px); /* Adjust min-height using viewport height */
     width: 100%;
 }
 
-.wrapper{
+.wrapper {
     width: 85%;
     margin: 0 auto;
     display: flex;
@@ -12,15 +12,16 @@
     align-items: center;
 }
 
-.wrapper > h2{
-    font-size: 32px;
+.wrapper > h2 {
+    font-size: 2rem; /* Adjust font size using relative units */
     color: #222;
     letter-spacing: 1px;
 }
 
-.wrapper > form{
+.wrapper > form {
     margin-top: 2rem;
-    width: 20%;
+    width: 80%; /* Adjust width using relative units */
+    max-width: 600px; /* Set maximum width */
     padding: 1.5rem;
     border: 1px solid #666;
     border-radius: 8px;
@@ -32,41 +33,43 @@
 }
 
 .wrapper > form > input,
-.wrapper > form > textarea{
+.wrapper > form > textarea {
     outline: none;
     border: none;
     border-bottom: 1px solid #666;
     padding: 0.4rem;
     resize: none;
+    width: 100%; /* Adjust width to fill container */
 }
 
-.wrapper > form > select{
+.wrapper > form > select {
     outline: none;
     border-bottom: 1px solid #666;
     padding: 0.4rem;
     resize: none;
-    font-size: 18px;
-    width: 180px;
+    font-size: 1rem; /* Adjust font size using relative units */
+    width: 50%; /* Adjust width using relative units */
+    max-width: 180px; /* Set maximum width */
     background-color: #efefef;
     border-radius: 8px;
 }
 
-.wrapper > form > label{
-    width: 175px;
+.wrapper > form > label {
+    width: 100%; /* Adjust width to fill container */
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    font-size: 18px;
+    font-size: 1rem; /* Adjust font size using relative units */
     font-weight: bold;
     cursor: pointer;
 }
 
-.createBlog{
+.createBlog {
     margin-top: 2.5rem;
     outline: none;
     border: 1px solid transparent;
     padding: 0.5rem 1.25rem;
-    font-size: 18px;
+    font-size: 1rem; /* Adjust font size using relative units */
     border-radius: 12px;
     background-color: #22ab22;
     color: #efefef;
@@ -74,16 +77,23 @@
     transition: 150ms;
 }
 
-.createBlog:hover{
+.createBlog:hover {
     background-color: #efefef;
     border-color: #22ab22;
     color: #22ab22;
 }
 
-.accessDenied{
+.accessDenied {
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
-    font-size: 32px;
+    margin-top: 5vw; /* Adjust margin in relation to viewport width */
+    font-size: 2rem; /* Adjust font size using relative units */
     font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wrapper > form {
+        width: 90%; /* Adjust width for smaller screens */
+    }
 }

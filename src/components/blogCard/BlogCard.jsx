@@ -42,7 +42,16 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
     }
   }
 
+  const [showMore, setShowMore] = useState(false);
+
+  const truncatedDesc = desc.split(' ').slice(0, 50).join(' '); // Get first 100 words
+
+  const handleToggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
+    <div className={classes.maincontainer}>
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <Link className={classes.imgContainer} href={`/blog/${_id}`}>
@@ -51,8 +60,16 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
         <div className={classes.blogData}>
           <div className={classes.left}>
             <h3>{title}</h3>
-            <p>{desc}</p>
-            <span>Created By: <span>1th of January</span></span>
+            <p>
+            {showMore ? desc : truncatedDesc} {/* Show truncated or full description */}
+            {!showMore && desc.length > 100 && ( // If description is longer than 100 words, show "Read More" link
+              <a className = {classes.readMore}href={`/blog/${_id}`}>Read More....</a>
+            )}
+          </p>
+
+        
+
+          
           </div>
           <div className={classes.right}>
             {blogLikes} {" "} {isLiked
@@ -61,6 +78,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

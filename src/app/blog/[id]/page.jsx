@@ -44,7 +44,7 @@ const BlogDetails = (ctx) => {
             setIsLiked(blog?.likes?.includes(session?.user?._id))
             setBlogLikes(blog?.likes?.length || 0)
         }
-        session && fetchBlog()
+         fetchBlog()
     }, [session])
 
     const handleDelete = async () => {
@@ -129,7 +129,7 @@ const BlogDetails = (ctx) => {
     return (
         <div className={classes.container}>
             <div className={classes.wrapper}>
-                <Image src={blogDetails?.imageUrl} width='750' height='650' />
+                <Image  className = {classes.img}src={blogDetails?.imageUrl} width='900' height='600' />
                 <div className={classes.row}>
                     <h3 className={classes.title}>{blogDetails?.title}</h3>
                     {
@@ -157,19 +157,20 @@ const BlogDetails = (ctx) => {
                         Category:
                         <span>{blogDetails?.category}</span>
                     </div>
-                    <div className={classes.right}>
+                    <div className={classes.right} style={{ paddingTop: '30px' }}>
+
                         {blogLikes} {" "} {isLiked ? <AiFillLike size={20} onClick={handleLike} /> : <AiOutlineLike size={20} onClick={handleLike} />}
                     </div>
                 </div>
                 <div className={classes.row}>
                     <p>{blogDetails?.desc}</p>
-                    <span>Posted: <span>{format(blogDetails?.createdAt)}</span></span>
+                    <span style={{ paddingTop: '30px' }}>Posted: <span>{format(blogDetails?.createdAt)}</span></span>
                 </div>
                 <div className={classes.commentSection}>
                     <div className={classes.commentInput}>
                         <Image src={person} width='45' height='45' alt="" />
                         <input value={commentText} type="text" placeholder='Type message...' onChange={(e) => setCommentText(e.target.value)}/>
-                        <button onClick={handleComment}>Post</button>
+                        <button onClick={handleComment}>Comment</button>
                     </div>
                     <div className={classes.comments}>
                         {

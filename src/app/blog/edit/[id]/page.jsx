@@ -9,8 +9,8 @@ import { useRouter } from 'next/navigation'
 import { AiOutlineFileImage } from 'react-icons/ai'
 
 const Edit = (ctx) => {
-    const CLOUD_NAME = 'doojo83ea'
-    const UPLOAD_PRESET = 'my_blog_project_webdevmania'
+    const CLOUD_NAME = 'dzh3eecsg'
+    const UPLOAD_PRESET = 'l8jg0ozb'
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
     const [category, setCategory] = useState("Nature")
@@ -118,11 +118,11 @@ const Edit = (ctx) => {
                     <input value={title} type="text" placeholder='Title...' onChange={(e) => setTitle(e.target.value)} />
                     <textarea value={desc} placeholder='Description...' onChange={(e) => setDesc(e.target.value)} />
                     <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                        <option value="Nature">Nature</option>
-                        <option value="Mountain">Mountain</option>
-                        <option value="Ocean">Ocean</option>
-                        <option value="Wildlife">Wildlife</option>
-                        <option value="Forest">Forest</option>
+                        <option value="Wellness and Lifestyle">Wellness and Lifestyle</option>
+                        <option value="Health Tips and Advice">Health Tips and Advice</option>
+                        <option value="Medical Conditions and Diseases">Medical Conditions and Diseases</option>
+                        <option value="Patient Stories and Experiences">Patient Stories and Experiences</option>
+                        <option value="Public Health and Advocacy">Public Health and Advocacy</option>
                     </select>
                     <label htmlFor='image'>
                         Upload Image <AiOutlineFileImage />

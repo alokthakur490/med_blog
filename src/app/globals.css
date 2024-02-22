@@ -2,8 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
-
+body{
+  background-color: rgb(239, 238, 238);
+}
 a{
   text-decoration: none;
   color: inherit;
