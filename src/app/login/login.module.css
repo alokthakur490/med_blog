@@ -45,15 +45,15 @@
     font-size: 17px;
     font-weight: bold;
     background-color: #efefef;
-    color: #22ab22;
+    color: #5EABFC;
     cursor: pointer;
     transition: 150ms;
     letter-spacing: 0.5px;
 }
 
 .submitButton:hover{
-    border-color: #22ab22;
-    background-color: #22ab22;
+    border-color: #5EABFC;
+    background-color: #5EABFC;
     color: #efefef;
 }
 

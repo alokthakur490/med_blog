@@ -71,7 +71,7 @@
     padding: 0.5rem 1.25rem;
     font-size: 1rem; /* Adjust font size using relative units */
     border-radius: 12px;
-    background-color: #22ab22;
+    background-color: #5EABFC;
     color: #efefef;
     cursor: pointer;
     transition: 150ms;
@@ -79,8 +79,8 @@
 
 .createBlog:hover {
     background-color: #efefef;
-    border-color: #22ab22;
-    color: #22ab22;
+    border-color: #5EABFC;
+    color: #5EABFC;
 }
 
 .accessDenied {

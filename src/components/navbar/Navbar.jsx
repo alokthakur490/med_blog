@@ -4,6 +4,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import classes from './navbar.module.css'
 import person from '../../../public/person.jpg'
+import logo from '../../../public/logojiva-removebg-preview.png'
+
 import { AiOutlineClose } from 'react-icons/ai'
 import {signIn, signOut, useSession} from 'next-auth/react'
 
@@ -20,9 +22,12 @@ const Navbar = () => {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <h2 className={classes.left}>
-          <Link href="/">Jiva</Link>
-        </h2>
+        
+      <Link href="/">
+      <Image src={logo} width={200} height={200} style={{ objectFit: 'contain' }}/>   
+</Link>
+
+
         <ul className={classes.right}>
           {
             session?.user
