@@ -2,6 +2,7 @@ import BlogCard from '@/components/blogCard/BlogCard'
 import { blogs } from '@/lib/data'
 import Image from 'next/image'
 import classes from './page.module.css'
+import LandingPage from '@/components/mencard/menuecard'
 
 export async function fetchBlogs(){
   const res = await fetch('http://localhost:3000/api/blog', {cache: 'no-store'})
@@ -15,7 +16,12 @@ export default async function Home() {
 
   return (
    <div className={classes.container}>
-    {blogs?.length > 0 && <h2>Jiva&apos;s Blogs </h2>}
+    <LandingPage/>
+    {blogs?.length > 0 && <h2>Featured Patient and Expert Contributors  </h2> 
+
+  }
+  
+   
      <div className={classes.wrapper}>
       {blogs?.length > 0 
        ? blogs.map((blog) => (

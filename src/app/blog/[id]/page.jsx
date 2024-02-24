@@ -13,6 +13,7 @@ import { useRouter } from 'next/navigation'
 import Comment from '@/components/comment/Comment'
 import person from '../../../../public/person.jpg'
 
+
 const BlogDetails = (ctx) => {
     const [blogDetails, setBlogDetails] = useState("")
     const [isLiked, setIsLiked] = useState(false)
@@ -128,6 +129,7 @@ const BlogDetails = (ctx) => {
 
     return (
         <div className={classes.container}>
+        
             <div className={classes.wrapper}>
                 <Image  className = {classes.img}src={blogDetails?.imageUrl} width='900' height='600' />
                 <div className={classes.row}>

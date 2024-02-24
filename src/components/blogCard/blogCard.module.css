@@ -4,16 +4,17 @@
     gap: 20px; /* Add gap between cards */
 }
 .maincontainer{
-    padding-left: 35px;
+    padding-left: 10%;
 }
 
 .container {
-    width: 90%; /* Set width to 100% to fill the grid cell */
+    width: 82%; /* Set width to 100% to fill the grid cell */
     height: 100%;
     box-shadow: 2px 5px 27px -8px rgba(0, 0, 0, 0.15);
     transition: 150ms;
     border-radius: 12px;
-    padding-right: 10px;
+    padding-right: 20px;
+    background-color: #d2e8fa;
     
 }
 
@@ -34,6 +35,7 @@
     justify-content: space-between;
     align-items: center;
     flex-grow:inherit ;
+    
 }
 
 .blogData > .left > h3{

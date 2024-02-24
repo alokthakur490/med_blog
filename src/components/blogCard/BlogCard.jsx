@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react'
 import classes from './blogCard.module.css'
 import { useSession } from 'next-auth/react'
 import { AiFillLike, AiOutlineLike } from 'react-icons/ai'
+import bgImg from '../../../public/blogs-desktop.jpg'
 
 const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => {
   const { data: session } = useSession()
@@ -51,6 +52,8 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
   };
 
   return (
+   
+       
     <div className={classes.maincontainer}>
     <div className={classes.container}>
       <div className={classes.wrapper}>
@@ -67,8 +70,7 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
             )}
           </p>
 
-        
-
+      
           
           </div>
           <div className={classes.right}>
@@ -80,6 +82,8 @@ const BlogCard = ({ blog: { title, desc, imageUrl, likes, authorId, _id } }) => 
       </div>
     </div>
     </div>
+   
+    
   )
 }
 
